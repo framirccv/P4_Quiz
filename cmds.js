@@ -88,7 +88,7 @@ exports.testCmd = (rl,id) =>{
         const quiz = model.getByIndex(id);    
 
         rl.question(`${colorize(quiz.question, 'red')} `, question => {     
-                if(question === quiz.answer){
+                if(question.toUpperCase() === quiz.answer.toUpperCase()){
                     log("Su respuesta es correcta");
                     biglog('CORRECTA','green');
                 }else{
@@ -227,19 +227,3 @@ const playOne = () => {
 playOne();
 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
